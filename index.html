@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi Sistem Pelaporan Kerusakan Fasilitas Kos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Progress Bar Atas -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header Navigasi -->
+    <header class="top-nav">
+        <div class="brand">
+            <span class="logo-badge">IK</span>
+            <span class="brand-text">INDAH KOST <small>Reporting System</small></span>
+        </div>
+        <div class="slide-indicator" id="slideIndicator">Slide 1 / 16</div>
+        <div class="nav-header-actions">
+            <a href="https://pelaporanfasilitaskos.vercel.app" target="_blank" class="btn-live-link">🔗 Live Website</a>
+            <button class="btn-fullscreen" id="btnFullscreen" title="Layar Penuh">⛶ Fullscreen</button>
+        </div>
+    </header>
+
+    <!-- Kontainer Utama Slide -->
+    <main class="presentation-wrapper" id="presentation">
+
+        <!-- SLIDE 1: COVER -->
+        <section class="slide active">
+            <div class="slide-content cover-slide">
+                <span class="pill-tag animate-up">PRESENTASI RANCANGAN & IMPLEMENTASI SISTEM</span>
+                <h1 class="animate-up delay-1">Sistem Pelaporan<br><span class="highlight">Kerusakan Fasilitas Kos</span></h1>
+                <p class="subtitle animate-up delay-2">Platform web interaktif terpusat untuk mendigitalisasi pelaporan kendala fasilitas, pemantauan status real-time, permodelan UML, serta demonstrasi antarmuka aplikasi secara lengkap.</p>
+                <div class="cover-meta animate-up delay-3">
+            </div>
+        </section>
+
+        <!-- SLIDE 2: LATAR BELAKANG -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">01 / ANALISIS KEBUTUHAN</span>
+                <h2 class="animate-up delay-1">Latar Belakang Sistem</h2>
+                <div class="card-box animate-up delay-2" style="padding: 30px;">
+                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--navy-dark);">Pentingnya Pemeliharaan Fasilitas Kos</h3>
+                    <p style="font-size: 15px; line-height: 1.7; color: var(--text-main);">
+                        Fasilitas lingkungan kos seperti instalasi listrik, kamar mandi, pintu, dan perlengkapan umum memerlukan pemeliharaan serta perbaikan berkala demi menjamin kenyamanan seluruh penghuni Indah Kost. 
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.7; color: var(--text-main); margin-top: 15px;">
+                        Namun, proses pelaporan konvensional yang masih mengandalkan pesan singkat pribadi (*chat*) sering kali menimbulkan hambatan operasional, seperti informasi yang tidak terstruktur, bukti kerusakan yang mudah hilang, serta ketidakjelasan status penanganan perbaikan. Oleh karena itu, dibutuhkan sebuah platform digital terpusat yang transparan dan terstruktur.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: PERMASALAHAN UTAMA -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">02 / ANALISIS MASALAH</span>
+                <h2 class="animate-up delay-1">Permasalahan di Lapangan</h2>
+                <div class="grid-2 animate-up delay-2">
+                    <div class="card-box problem-card">
+                        <div class="card-badge-top red">KENDALA OPERASIONAL</div>
+                        <h3>1. Laporan Tertumpuk & Terlewat</h3>
+                        <p>Pesan keluhan yang dikirim melalui aplikasi chat pribadi mudah tenggelam tertutup pesan lain, sehingga sering kali terabaikan oleh pengelola.</p>
+                    </div>
+                    <div class="card-box problem-card">
+                        <div class="card-badge-top red">KENDALA OPERASIONAL</div>
+                        <h3>2. Minim Transparansi Status</h3>
+                        <p>Penghuni kos tidak mengetahui sejauh mana progres perbaikan kendala mereka (apakah baru dibaca, sedang dikerjakan, atau sudah selesai).</p>
+                    </div>
+                    <div class="card-box problem-card">
+                        <div class="card-badge-top red">KENDALA OPERASIONAL</div>
+                        <h3>3. Tanpa Skala Prioritas</h3>
+                        <p>Keluhan mendesak (seperti korsleting listrik atau kebocoran parah) tercampur rata dengan keluhan ringan, sehingga sulit diurutkan penanganannya.</p>
+                    </div>
+                    <div class="card-box problem-card">
+                        <div class="card-badge-top red">KENDALA OPERASIONAL</div>
+                        <h3>4. Tidak Ada Riwayat & Bukti</h3>
+                        <p>Riwayat laporan sebelumnya dan bukti foto kerusakan tidak terdata secara rapi dalam satu basis data yang terpusat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: MATRIKS & SOLUSI -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">03 / PEMETAAN SOLUSI</span>
+                <h2 class="animate-up delay-1">Matriks Masalah & Solusi Sistem</h2>
+                <div class="table-wrapper animate-up delay-2">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 22%;">Aspek / Kategori</th>
+                                <th style="width: 39%;">Kondisi Lama (Masalah)</th>
+                                <th style="width: 39%;">Solusi Sistem Pelaporan Kos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Input & Bukti Laporan</strong></td>
+                                <td>Pesan teks bebas tanpa struktur, lokasi kamar dan bukti visual sering terlewat.</td>
+                                <td><span class="tag-solusi">Form & Upload Foto</span> Wajib pilih fasilitas, prioritas, deskripsi, & unggah foto bukti.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Skala Prioritas</strong></td>
+                                <td>Semua keluhan tercampur rata tanpa penanda tingkat urgensi.</td>
+                                <td><span class="tag-solusi">Pilih Tingkat Prioritas</span> Klasifikasi <em>Tinggi</em> / <em>Rendah</em> untuk urutan kerja penanganan.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tracking Perbaikan</strong></td>
+                                <td>Penghuni harus menanyakan ulang status perbaikan secara manual.</td>
+                                <td><span class="tag-solusi">Update Status Real-Time</span> Siklus status jelas (<em>Menunggu → Diproses → Selesai</em>) + catatan.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rekap & Histori</strong></td>
+                                <td>Tidak ada log riwayat perubahan status maupun tanggal penanganan.</td>
+                                <td><span class="tag-solusi">Dashboard & Riwayat</span> Statistik otomatis & tabel riwayat lengkap dengan timestamp.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: BUSINESS LOGIC -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">04 / ATURAN & LOGIKA SISTEM</span>
+                <h2 class="animate-up delay-1">Business Logic Sistem</h2>
+                <div class="logic-grid animate-up delay-2">
+                    <div class="logic-card">
+                        <div class="logic-num">01</div>
+                        <h4>Validasi Login & Routing Role</h4>
+                        <p>Sistem memverifikasi <code>username</code> & <code>password</code> berdasarkan pilihan role (Anak Kos / Pemilik Kos) sebelum memberikan akses ke halaman dashboard.</p>
+                    </div>
+                    <div class="logic-card">
+                        <div class="logic-num">02</div>
+                        <h4>Pembuatan Laporan & Lampiran Foto</h4>
+                        <p>Anak Kos mengisi form fasilitas, prioritas, dan mengunggah foto. Data masuk ke database dengan status awal <code>Menunggu</code>.</p>
+                    </div>
+                    <div class="logic-card">
+                        <div class="logic-num">03</div>
+                        <h4>Otorisasi Update Status</h4>
+                        <p>Hanya pihak <strong>Pemilik Kos</strong> yang memiliki hak akses untuk mengubah status perbaikan serta memasukkan catatan penanganan.</p>
+                    </div>
+                    <div class="logic-card">
+                        <div class="logic-num">04</div>
+                        <h4>Pencatatan Log Riwayat Otomatis</h4>
+                        <p>Setiap perubahan status merekam entri baru ke tabel riwayat yang terhubung dengan identitas laporan dan pengelola.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: ROLE AKSES -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">05 / OTORISASI PENGGUNA</span>
+                <h2 class="animate-up delay-1">Pembagian Role Akses Sistem</h2>
+                <div class="grid-2 animate-up delay-2">
+                    <div class="card-box role-card">
+                        <div class="role-header">
+                            <div class="avatar tenant">A</div>
+                            <div>
+                                <h3>Anak Kos (Penghuni)</h3>
+                                <span class="role-badge tenant-badge">Aktor Pelapor</span>
+                            </div>
+                        </div>
+                        <ul class="custom-list">
+                            <li><strong>Dashboard Anak Kos:</strong> Memantau ringkasan jumlah laporan pribadi.</li>
+                            <li><strong>Lapor Kerusakan:</strong> Mengisi form keluhan fasilitas dan prioritas.</li>
+                            <li><strong>Semua Laporan & Riwayat:</strong> Mengecek progres penanganan secara berkala.</li>
+                            <li><strong>Hubungi Pemilik:</strong> Pintasan cepat komunikasi melalui WhatsApp.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-box role-card">
+                        <div class="role-header">
+                            <div class="avatar owner">P</div>
+                            <div>
+                                <h3>Pemilik Kos (Pengelola)</h3>
+                                <span class="role-badge">Aktor Administrator</span>
+                            </div>
+                        </div>
+                        <ul class="custom-list">
+                            <li><strong>Dashboard Pemilik:</strong> Memantau rekap total seluruh laporan masuk.</li>
+                            <li><strong>Semua Laporan:</strong> Memeriksa daftar keluhan dari seluruh penghuni.</li>
+                            <li><strong>Update Status:</strong> Memperbarui status perbaikan dan mengisi catatan teknis.</li>
+                            <li><strong>Riwayat Laporan:</strong> Melihat log rekam jejak penyelesaian perbaikan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: UML - USE CASE DIAGRAM -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">06 / PERMODELAN UML (1/4)</span>
+                <h2 class="animate-up delay-1">UML: Use Case Diagram</h2>
+                <div class="grid-2 animate-up delay-2">
+                    <div class="card-box">
+                        <h3>Aktor & Batasan Sistem</h3>
+                        <p style="font-size: 14px; margin-bottom: 12px;">Sistem memiliki 2 aktor utama dengan pembagian hak akses yang tegas:</p>
+                        <ul class="custom-list">
+                            <li><strong>Anak Kos:</strong> Melakukan login, melihat dashboard, membuat laporan (+ prioritas & foto), memantau riwayat laporan, dan menghubungi pemilik.</li>
+                            <li><strong>Pemilik Kos:</strong> Melakukan login, melihat dashboard admin, memeriksa laporan masuk, serta melakukan update status perbaikan.</li>
+                        </ul>
+                    </div>
+                    <div class="card-box" style="background: var(--blue-light); border-color: #bfdbfe;">
+                        <h3 style="color: var(--blue-primary);">Interaksi Fungsional</h3>
+                        <p style="font-size: 14px; line-height: 1.6; margin-top: 8px;">
+                            Use Case Diagram mendefinisikan batasan sistem web pelaporan. Setiap aktor berinteraksi melalui fungsi autentikasi terpusat sebelum mengakses modul manajemen data masing-masing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: UML - ACTIVITY DIAGRAM -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">07 / PERMODELAN UML (2/4)</span>
+                <h2 class="animate-up delay-1">UML: Activity Diagram (Alur Sistem)</h2>
+                <div class="card-box animate-up delay-2" style="padding: 24px;">
+                    <h3 style="margin-bottom: 14px; color: var(--navy-dark);">Alur Aktivitas Utama (Pelaporan hingga Selesai)</h3>
+                    <div class="flow-steps">
+                        <div class="flow-step"><span>1</span> Login sistem pilih peran (Anak Kos / Pemilik Kos)</div>
+                        <div class="flow-step"><span>2</span> Anak Kos mengisi form laporan kerusakan & upload foto</div>
+                        <div class="flow-step"><span>3</span> Status laporan masuk ke sistem dengan status awal: Menunggu</div>
+                        <div class="flow-step"><span>4</span> Pemilik Kos memeriksa daftar laporan di dashboard admin</div>
+                        <div class="flow-step"><span>5</span> Pemilik Kos memperbarui status perbaikan (Diproses / Selesai)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: UML - CLASS DIAGRAM -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">08 / PERMODELAN UML (3/4)</span>
+                <h2 class="animate-up delay-1">UML: Class Diagram</h2>
+                <div class="grid-2 animate-up delay-2">
+                    <div class="card-box">
+                        <h3>Struktur Entitas Basis Data</h3>
+                        <ul class="custom-list">
+                            <li><code>User</code> (id_user, username, password, peran)</li>
+                            <li><code>Laporan</code> (id_laporan, id_pelapor, fasilitas, lokasi, deskripsi, urgensi, status)</li>
+                            <li><code>Riwayat_Status</code> (id_riwayat, id_laporan, status_baru, catatan, tanggal)</li>
+                        </ul>
+                    </div>
+                    <div class="card-box">
+                        <h3>Relasi Antar Kelas</h3>
+                        <p style="font-size: 14px; line-height: 1.6; margin-top: 8px;">
+                            • Relasi 1-to-Many antara <code>User</code> (Anak Kos) dengan <code>Laporan</code>.<br>
+                            • Relasi 1-to-Many antara <code>Laporan</code> dengan <code>Riwayat_Status</code> untuk pelacakan histori perubahan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 10: UML - SEQUENCE DIAGRAM -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">09 / PERMODELAN UML (4/4)</span>
+                <h2 class="animate-up delay-1">UML: Sequence Diagram</h2>
+                <div class="card-box animate-up delay-2" style="padding: 24px;">
+                    <h3>Kronologi Interaksi Proses</h3>
+                    <ol style="margin-left: 20px; font-size: 14.5px; line-height: 1.8; color: var(--text-main); margin-top: 10px;">
+                        <li><strong>Anak Kos</strong> mengisi formulir kerusakan pada interface aplikasi.</li>
+                        <li>Sistem memvalidasi masukan dan menyimpan data ke tabel <code>Laporan</code> (Status: Menunggu).</li>
+                        <li><strong>Pemilik Kos</strong> membuka dashboard admin untuk memeriksa daftar laporan masuk.</li>
+                        <li>Pemilik kos melakukan pembaruan status perbaikan dan memasukkan catatan.</li>
+                        <li>Sistem mencatat log riwayat dan menampilkan update secara real-time pada perangkat penghuni.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 11: WIREFRAME - LOGIN -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">10 / DEMONSTRASI WIREFRAME (1/7)</span>
+                <h2 class="animate-up delay-1">Halaman Login</h2>
+                <div class="ui-showcase-single animate-up delay-2">
+                    <div class="ui-desc">
+                        <h3>Autentikasi & Pemilihan Peran</h3>
+                        <p>Halaman awal sistem bagi pengguna untuk memilih peran (Anak Kos atau Pemilik Kos), memasukkan email serta password sebelum masuk ke dalam sistem[cite: 12].</p>
+                    </div>
+                    <div class="ui-img-box">
+                        <img src="wireframe_login.jpg" alt="Wireframe Login" class="app-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 12: WIREFRAME - DASHBOARD KOS -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">11 / DEMONSTRASI WIREFRAME (2/7)</span>
+                <h2 class="animate-up delay-1">Dashboard Anak Kos</h2>
+                <div class="ui-showcase-single animate-up delay-2">
+                    <div class="ui-desc">
+                        <h3>Ringkasan Statistik & Sapaan Personal</h3>
+                        <p>Menampilkan sapaan personal kepada penghuni, informasi tanggal real-time, serta kartu statistik ringkas (Total Laporan, Menunggu, Diproses, Selesai)[cite: 14].</p>
+                    </div>
+                    <div class="ui-img-box">
+                        <img src="wireframe_dashboard_kos.jpg" alt="Wireframe Dashboard Anak Kos" class="app-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 13: WIREFRAME - LAPOR KERUSAKAN -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">12 / DEMONSTRASI WIREFRAME (3/7)</span>
+                <h2 class="animate-up delay-1">Form Lapor Kerusakan</h2>
+                <div class="ui-showcase-single animate-up delay-2">
+                    <div class="ui-desc">
+                        <h3>Formulir Pengajuan Kendala</h3>
+                        <p>Menu bagi penghuni untuk mengisi nama fasilitas, lokasi kerusakan, deskripsi kendala secara terperinci, hingga tingkat prioritas[cite: 13].</p>
+                    </div>
+                    <div class="ui-img-box">
+                        <img src="wireframe_lapor.jpg" alt="Wireframe Lapor Kerusakan" class="app-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 14: WIREFRAME - SEMUA LAPORAN -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">13 / DEMONSTRASI WIREFRAME (4/7)</span>
+                <h2 class="animate-up delay-1">Semua Laporan</h2>
+                <div class="ui-showcase-single animate-up delay-2">
+                    <div class="ui-desc">
+                        <h3>Daftar Laporan Seluruh Penghuni</h3>
+                        <p>Menyajikan tabel rekapitulasi lengkap laporan dari seluruh penghuni kos beserta informasi ID, pelapor, fasilitas, lokasi, tanggal, prioritas, dan status[cite: 16].</p>
+                    </div>
+                    <div class="ui-img-box">
+                        <img src="wireframe_semua_laporan.jpg" alt="Wireframe Semua Laporan" class="app-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 15: WIREFRAME - RIWAYAT LAPORAN -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">14 / DEMONSTRASI WIREFRAME (5/7)</span>
+                <h2 class="animate-up delay-1">Riwayat Laporan</h2>
+                <div class="ui-showcase-single animate-up delay-2">
+                    <div class="ui-desc">
+                        <h3>Pantau Progres & Perkembangan</h3>
+                        <p>Menampilkan rekam jejak perkembangan seluruh laporan penghuni secara kronologis dengan status terperinci[cite: 15].</p>
+                    </div>
+                    <div class="ui-img-box">
+                        <img src="wireframe_riwayat.jpg" alt="Wireframe Riwayat Laporan" class="app-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 16: WIREFRAME - DASHBOARD PEMILIK & UPDATE STATUS -->
+        <section class="slide">
+            <div class="slide-content">
+                <span class="section-tag animate-up">15 / DEMONSTRASI WIREFRAME (6/7 & 7/7)</span>
+                <h2 class="animate-up delay-1">Dashboard Pemilik & Update Status</h2>
+                <div class="grid-2 animate-up delay-2">
+                    <div class="card-box">
+                        <h3>Dashboard Pemilik Kos</h3>
+                        <p style="font-size: 13px;">Panel khusus pengelola (Ibu Indah) untuk memantau rekap total laporan masuk[cite: 11].</p>
+                        <div style="margin-top: 8px; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1;">
+                            <img src="wireframe_dashboard_pemilik.jpg" alt="Dashboard Pemilik" style="width:100%; height:auto; display:block;">
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3>Update Status Laporan</h3>
+                        <p style="font-size: 13px;">Formulir pengelola untuk mengubah status pengerjaan fasilitas dan mencatat penanganan[cite: 17].</p>
+                        <div style="margin-top: 8px; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1;">
+                            <img src="wireframe_update_status.jpg" alt="Update Status" style="width:100%; height:auto; display:block;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Kontrol Navigasi Bawah -->
+    <footer class="bottom-controls">
+        <div class="dots-nav" id="dotsNav"></div>
+        <div class="nav-buttons">
+            <button class="btn-nav" id="prevBtn">← Sebelumnya</button>
+            <button class="btn-nav primary" id="nextBtn">Selanjutnya →</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
